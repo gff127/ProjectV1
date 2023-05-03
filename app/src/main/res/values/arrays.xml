@@ -1,0 +1,9 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="notations">
+        <item>Standard</item>
+        <item>Scientific</item>
+    </string-array>
+
+
+</resources>

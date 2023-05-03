@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="15dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ownedRecyclerView"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_marginHorizontal="10dp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/exitUpgrades"
+
+        app:layout_constraintStart_toEndOf="@+id/availableRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/owned"
+        app:layout_constraintVertical_weight="1"
+        tools:listitem="@layout/owned_list_item"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/upgradeHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upgrades"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upgradeHeading" />
+
+    <TextView
+        android:id="@+id/owned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Owned"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/available"
+        app:layout_constraintStart_toStartOf="@+id/ownedRecyclerView"
+        app:layout_constraintTop_toTopOf="@+id/available" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/availableRecyclerView"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_marginHorizontal="15dp"
+        android:fadeScrollbars="false"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ownedRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/available"
+        tools:listitem="@layout/available_list_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/exitUpgrades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:onClick="exitClicked"
+
+        android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="notationSetting"
+        android:title="Notation"
+        android:entries="@array/notations"
+        android:entryValues="@array/notations"
+        android:summary="Choose how numbers are displayed"
+        android:defaultValue="Standard" />
+    <SwitchPreference
+        android:key="muteSetting"
+        android:title="Mute "
+        android:summary="Disable button press noise"
+        android:defaultValue="false" />
+
+</PreferenceScreen>
